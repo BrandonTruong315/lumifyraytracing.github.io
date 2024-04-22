@@ -1,0 +1,451 @@
+/* Reset default margin and padding */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 25px;
+}   
+
+h1{
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  
+}
+
+h2{
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  font-size: 25px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+p{
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  font-size: 25px;
+  font-family: 'Alegreya', serif;
+  
+}
+
+
+.company-name img {
+  height: 80px; /* Or the height you want your logo to be */
+  width: auto; /* To maintain aspect ratio */
+  margin-left: 150px;
+}
+
+#features {
+  background-color: #e6e5e5; /* This sets the background color of the features section to grey */
+  padding-bottom: 30px;
+}
+
+  /* feature lining up the text */
+.content-wrapper {
+  /* This ensures the content and image are on the same line */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Aligns items to the start of the flex container */
+  
+}
+.content-wrapper p {
+  padding: 10px;
+  margin-left: auto; /* changed to auto for responsive centering */
+  margin-right: auto; /* changed to auto for responsive centering */
+  max-width: 1000px; /* you can set a max-width for larger screens */
+  text-align: left;
+  
+}
+
+.text-box {
+  color: #fff;
+  position: absolute;
+  bottom: 8%; /* Positions the text box at the very bottom */
+  text-align: left; /* Centers the text within the text box */
+}
+
+.text-box h4 {
+  font-size: 100px;
+  margin: 0; 
+  margin-bottom: -85px; 
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(image/back.png);
+  -webkit-background-clip: text;
+  background-position: 0  0;
+  animation: back 20s linear infinite;
+}
+
+/* create the animation for landing page */
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+/* Set font family */
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  background-color: #ffffff; /* Light grey background for the whole page */
+
+    
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px; /* Adjust the value to match the height of your fixed header */
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #d4d4d4;
+  padding: 3px;
+  border-bottom: 1px solid #b6b6b6;
+  width: auto; /* Ensures nav bar spans the full width */
+}
+.company b{
+  text-decoration: none;
+  padding-right: 1000px;
+  color: hsl(51, 100%, 31%);
+  font-size: 45px; /* Choose a size that fits your design */
+  font-weight: bold;
+  margin: auto;
+
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 30px; /* Adds margin to the left and right of each link for spacing */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000; /* nav text color */
+  font-weight: bold;
+  transition: color 0.1s ease;
+  
+}
+
+nav ul li a:hover {
+    color: #006eff;
+}
+
+/* Section styles */
+section {
+    padding-top: 20px;
+    background-color: #fff; /* White background for content */
+    border-top: 1px solid #b6b6b6;
+}
+
+.product-benefits {
+  text-align: center;
+  
+}
+
+.benefits-title {
+  font-size: 50px;
+  text-align: center;
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+  margin: auto; 
+  padding-bottom: 50px;
+  border-bottom: 1px solid #b6b6b6;
+  
+}
+
+
+.benefit-item {
+  width: 100%; /* Adjust so that items have a little space between them */
+  padding: 40px;
+}
+
+.benefit-item h3 {
+  margin-bottom: 15px; /* Space between the title and the paragraph */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+    border-top: 1px solid #b6b6b6;
+}
+
+
+footer a {
+  color: #0096D6; 
+  text-decoration: none; /* Optional: removes the underline from links */
+}
+
+footer a:hover {
+  text-decoration: underline; 
+}
+
+/* clean up edge around image */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ensure the image below the feature */
+main {
+  display: grid;
+  place-items: center;
+  padding: 40px;
+  padding-bottom: 40px;
+}
+
+/* ensure the image lineup */
+.container {
+  display: grid;
+  place-content: left;
+  position: relative;
+  --position: 50%; /* the slider is center always.*/
+  
+}
+
+/* size of image */
+.image-container {
+  max-width: 1000px;
+  max-height: 1000vh;
+  
+}
+
+/* this ensure the image is aline with the after image*/
+.slider-image {
+  width: 100%;
+  height: 100%;
+  /* but also ensure that the photo is fitted right when pulling the slider */
+  object-position: left;
+  object-fit: cover; 
+}
+
+/* side by side compare */
+.image-before {
+  position: absolute;
+  inset: 0;
+  width: var(--position);
+}
+
+/* The main slider going side to side */
+.slider {
+  position: absolute;
+  inset: 0; /* allow us to move the slider side to side*/
+  cursor: pointer;
+  opacity: 0; /* remove the slider to look cleaner*/
+  
+}
+
+/* The white line down the middle of slider line */
+.slider-line {
+  position: absolute;
+  width: .1rem;
+  height: 100%;
+  background-color: #ffffff;
+  left: var(--position); /* ensure the line is center */
+  pointer-events: none; /* allows elements to not receive hover/click events*/
+}
+
+/*circle buttom */
+.slider-button {
+  position: absolute;
+  /* is center with the slider line */
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+video {
+  padding: 20px;
+  width: 90%; /* makes the video responsive */
+  height: auto; /* maintains the aspect ratio */
+}
+
+/* dark mode styles */
+body.dark-mode {
+  background-color: #020202;
+  color: #e0e0e0;
+}
+
+/* You can add more specific styles for dark mode as needed */
+/* any new section added to the webite, update them for dark mode here */
+.dark-mode header, .dark-mode footer, .dark-mode section, .dark-mode nav, .dark-mode #features{
+  background-color: #1e1e1e;
+}
+
+/* nav-bar color when dark mode*/
+.dark-mode a {
+  color: #ffffff;
+}
+
+/* dark mode for  mode slider*/
+.dark-mode .mode-slider-label {
+  background-color: #424242;
+}
+.dark-mode .mode-slider-label:before {
+  background-color: rgb(204, 201, 0);
+  
+}
+
+/* Container for the mode-slider */
+.mode-slider-container {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 10px;
+}
+
+/* Hide default checkbox */
+.mode-slider-checkbox {
+  display: none;
+}
+
+/* Custom styles for the slider */
+.mode-slider-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #5c5858;
+  transition: background-color 0.4s;
+  border-radius: 34px;
+}
+
+.mode-slider-label:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(204, 201, 0);
+  transition: transform 0.4s;
+  border-radius: 50%;
+}
+
+/* Position the slider button on the right when checked */
+.mode-slider-checkbox:checked + .mode-slider-label:before {
+  transform: translateX(26px);
+}
+
+/* Default styles for the moon and sun images */
+.mode-moon, .mode-sun {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px; /* Adjust if necessary */
+  height: 24px; /* Adjust if necessary */
+  transition: opacity 0.3s;
+}
+
+/* Position the moon on the left */
+.mode-moon {
+  left: 4px;
+  opacity: 0; /* Moon starts hidden */
+}
+
+/* Position the sun on the right */
+.mode-sun {
+  right: 5px;
+  opacity: 1; /* Sun starts visible */
+}
+
+/* When checked, show the moon and hide the sun */
+.mode-slider-checkbox:checked ~ .mode-slider-label .mode-moon {
+  opacity: 1;
+}
+
+.mode-slider-checkbox:checked ~ .mode-slider-label .mode-sun {
+  opacity: 0;
+}
+
+.backgroundImage{
+  width:100%;
+  height: 100vh;
+  background-image: url(image/san_miguel_path_blur.png);
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid #b6b6b6;
+  border-bottom: 1px solid #b6b6b6;
+}
+
+.row {
+    width: auto;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.column {
+    flex: 1; /* Each column takes up equal space */
+    padding: 10px;
+}
+
+.image-column img {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Maintain aspect ratio */   
+}
+
+.text-column {
+    padding-left: 20px; /* Add some spacing between the image and text */    
+}
+
+/*animation*/
+
+/* Base state for sections; they take up space but are invisible */
+.fade-in-section {
+  opacity: 0;
+  filter: blur(20px);
+  visibility: hidden;
+  transform: translateX(-500px); /* Start slightly off-screen */
+  transition: opacity 1s ease, transform 1s ease, visibility 1s; /* Transition for effect */
+}
+/* Slide-in from left for odd sections */
+.fade-in-section:nth-child(odd) {
+  transform: translateX(-500px);
+}
+
+/* Slide-in from right for even sections */
+.fade-in-section:nth-child(even) {
+  transform: translateX(500px);
+}
+
+/* When the section is in the viewport, slide and fade it in */
+.fade-in-section.show {
+  opacity: 1;
+  filter: blur(0px);
+  visibility: visible;
+  transform: translateX(0);
+  transition-delay: 0s; /* Apply effect immediately */
+}
+
+
